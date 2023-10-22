@@ -11,6 +11,6 @@ module.exports = (dependencies) => {
         
 		return usersRepository.delete(user);
 	};
+	return { execute };
 };
 
-return { execute };

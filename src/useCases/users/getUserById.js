@@ -8,6 +8,6 @@ module.exports = (dependencies) => {
 	const execute = ({ id }) => {
 		return usersRepository.getById(id);
 	};
+	return { execute };
 };
 
-return { execute };

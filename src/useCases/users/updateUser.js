@@ -9,6 +9,6 @@ module.exports = (dependencies) => {
         
 		return usersRepository.update(user);
 	};
+	return { execute };
 };
 
-return { execute };

@@ -20,6 +20,6 @@ module.exports = (dependencies) => {
 
 		return usersRepository.add(user);
 	};
+	return { execute };
 };
 
-return { execute };
