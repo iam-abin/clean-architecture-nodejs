@@ -16,7 +16,7 @@ const repository = () => {
 	return {
 		add: async (user) => {
 			const userObject = new User(user);
-			return userObject.save().lean();
+			return userObject.save();
 		},
 
 		update: async (user) => {
