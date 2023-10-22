@@ -5,12 +5,13 @@ const logger = require('morgan');
 const { connect: connectDB } = require("./frameworks/database/mongo");
 const routes = require('./frameworks/expressSpecific/routes');
 const dependencies = require("./config/dependencies");
-
-const API_PREFIX = process.env.API_PREFIX || '/api/v1'
+const errorHandler = require('./frameworks/expressSpecific/errorHandler')
 
 const app = express();
 dotenv.config();
 
+
+const API_PREFIX = process.env.API_PREFIX || '/api/v1'
 const PORT = process.env.PORT || 8080;
 
 module.exports = {
@@ -24,6 +25,7 @@ module.exports = {
 		app.use(API_PREFIX,routes(dependencies))
 
 		// Common error handler
+		app.use(errorHandler)
 
 		app.listen(PORT, () => {
 			console.log(`listening to port ${PORT}`);
