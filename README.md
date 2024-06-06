@@ -18,7 +18,7 @@
  
  - The variables, functions, and classes in the outer layers cannot be mentioned in the more inward levels.
 
-***Dependency injections: ***
+***Dependency injections:***
 Dependency injection in Clean Architecture is a technique that allows you to provide the dependencies a component needs from the outside, promoting the separation of concerns and making it easier to test different implementations of those dependencies.
 
 ### Four Layers of Clean Architecture
